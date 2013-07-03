@@ -11,6 +11,8 @@ This bundle adds a Twig Extension with a filter for automatically converting dat
 
 and many more formats...
 
+## Travis CI status
+
 [![Build Status](https://secure.travis-ci.org/artur-gajewski/date-converter-bundle.png)](https://travis-ci.org/artur-gajewski/date-converter-bundle)
 
 ## Installation ##
