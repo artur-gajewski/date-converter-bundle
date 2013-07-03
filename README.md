@@ -58,3 +58,9 @@ This library adds a filter for twig templates that can be used like:
 ## License ##
 
 See `LICENSE`.
+
+## Contact ##
+
+Email: info@arturgajewski.com
+
+Skype: artur.t.gajewski.com
