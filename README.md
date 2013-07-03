@@ -51,9 +51,9 @@ and many more formats...
 
 ## Usage ##
 
-This library adds a filter for twig templates that can be used like:
+This library adds a filter for twig templates that can be used like so:
 
-    {{ item.created | created_ago }}
+    {{ item.created | ago }}
 
 ## License ##
 

@@ -14,7 +14,7 @@ class DateConverterTwigExtensionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('Aga\DateConverterBundle\Extension\DateConverterTwigExtension',
             get_class($extension));
 
-        $this->assertEquals(true, method_exists($extension, 'createdAgo'));
+        $this->assertEquals(true, method_exists($extension, 'ago'));
     }
 
     public function testCreatedAgoExtension()

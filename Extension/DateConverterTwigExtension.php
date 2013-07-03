@@ -29,43 +29,43 @@ class DateConverterTwigExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'created_ago' => new \Twig_Filter_Method($this, 'createdAgo'),
+            'ago' => new \Twig_Filter_Method($this, 'ago'),
         );
     }
 
-    public function createdAgo(\DateTime $dateTime)
+    public function ago(\DateTime $dateTime)
     {
         $delta = time() - $dateTime->getTimestamp();
         if ($delta < 0)
-            throw new \Exception("createdAgo is unable to handle dates in the future");
+            throw new \Exception("Ago is unable to handle dates in the future");
 
-        $createdAgoString = "";
+        $agoString = "";
         
         if ($delta < 60)
         {
             // Seconds
             $time = $delta;
-            $createdAgoString = $time . " second" . (($time === 0 || $time > 1) ? "s" : "") . " ago";
+            $agoString = $time . " second" . (($time === 0 || $time > 1) ? "s" : "") . " ago";
         }
         else if ($delta < 3600)
         {
             // Mins
             $time = floor($delta / 60);
-            $createdAgoString = $time . " minute" . (($time > 1) ? "s" : "") . " ago";
+            $agoString = $time . " minute" . (($time > 1) ? "s" : "") . " ago";
         }
         else if ($delta < 86400)
         {
             // Hours
             $time = floor($delta / 3600);
-            $createdAgoString = $time . " hour" . (($time > 1) ? "s" : "") . " ago";
+            $agoString = $time . " hour" . (($time > 1) ? "s" : "") . " ago";
         }
         else
         {
             // Days
             $time = floor($delta / 86400);
-            $createdAgoString = $time . " day" . (($time > 1) ? "s" : "") . " ago";
+            $agoString = $time . " day" . (($time > 1) ? "s" : "") . " ago";
         }
 
-        return $createdAgoString;
+        return $agoString;
     }
 }
