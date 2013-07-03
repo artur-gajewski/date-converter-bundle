@@ -17,16 +17,12 @@ and many more formats...
 
 ## Installation
 
-Add this bundle to your project as a Git submodule:
-
-	$ git submodule add git://github.com/artur-gajewski/date-converter-bundle.git vendor/bundles/Aga/AgaDateConverterBundle
-
-If you are using Composer, add the following lines to your composer.json file and update your project's composer installation.
+Add the following lines to your composer.json file and update your project's composer installation.
 
 ```json
 {
     "require": {
-       "liip/drupalregistrymodule": "dev-master"
+       "artur-gajewski/date-converter-bundle": "1.0.*@dev"
     }
 }
 ```
