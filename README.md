@@ -1,6 +1,6 @@
 # AgaDateConverterBundle #
 
-## About ##
+## About
 
 This bundle adds a Twig Extension with a filter for automatically converting date to more human readable format:
 
