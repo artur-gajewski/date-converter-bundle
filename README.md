@@ -36,16 +36,24 @@ and many more formats...
         {
           return array(
               // ...
-              new Aga\DateConverterBundle\AgaDateConverterBundle(),
+              new Aga\DateConverterBundle\DateConverterBundle(),
               // ...
           );
         }
+        
+    4. Make the Twig extensions available by updating your services configuration
+    
+    	// app/config/services.yml
+    	aga_dateconverter.twig.extension:
+			class: Aga\DateConverterBundle\Extension\DateConverterTwigExtension  
+		 	tags:
+				- { name: twig.extension }
 
 ## Usage ##
 
 This library adds a filter for twig templates that can be used like:
 
-    {{ item.created | createdAgo }}
+    {{ item.created | created_ago }}
 
 ## License ##
 
