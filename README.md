@@ -17,37 +17,47 @@ and many more formats...
 
 ## Installation
 
-    1. Add this bundle to your project as a Git submodule:
+Add this bundle to your project as a Git submodule:
 
-        $ git submodule add git://github.com/artur-gajewski/date-converter-bundle.git vendor/bundles/Aga/AgaDateConverterBundle
+	$ git submodule add git://github.com/artur-gajewski/date-converter-bundle.git vendor/bundles/Aga/AgaDateConverterBundle
 
-    2. Add the Aga namespace to your autoloader:
+If you are using Composer, add the following lines to your composer.json file and update your project's composer installation.
 
-        // app/autoload.php
-        $loader->registerNamespaces(array(
-            'Aga' => __DIR__.'/../vendor/bundles',
-            // your other namespaces
-        ));
+```json
+{
+    "require": {
+       "liip/drupalregistrymodule": "dev-master"
+    }
+}
+```
 
-    3. Add this bundle to your application's kernel:
+Add the Aga namespace to your autoloader:
 
-        // application/ApplicationKernel.php
-        public function registerBundles()
-        {
-          return array(
-              // ...
-              new Aga\DateConverterBundle\DateConverterBundle(),
-              // ...
-          );
-        }
-        
-    4. Make the Twig extensions available by updating your services configuration
-    
-    	// app/config/services.yml
-    	aga_dateconverter.twig.extension:
-			class: Aga\DateConverterBundle\Extension\DateConverterTwigExtension  
-		 	tags:
-				- { name: twig.extension }
+	// app/autoload.php
+	$loader->registerNamespaces(array(
+		'Aga' => __DIR__.'/../vendor/bundles',
+		// your other namespaces
+	));
+
+Add this bundle to your application's kernel:
+
+	// application/ApplicationKernel.php
+	public function registerBundles()
+	{
+	  return array(
+		  // ...
+		  new Aga\DateConverterBundle\DateConverterBundle(),
+		  // ...
+	  );
+	}
+	
+Make the Twig extensions available by updating your services configuration
+
+	// app/config/services.yml
+	aga_dateconverter.twig.extension:
+		class: Aga\DateConverterBundle\Extension\DateConverterTwigExtension  
+		tags:
+			- { name: twig.extension }
 
 ## Usage
 
