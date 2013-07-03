@@ -15,7 +15,7 @@ and many more formats...
 
 [![Build Status](https://secure.travis-ci.org/artur-gajewski/date-converter-bundle.png)](https://travis-ci.org/artur-gajewski/date-converter-bundle)
 
-## Installation ##
+## Installation
 
     1. Add this bundle to your project as a Git submodule:
 
@@ -49,17 +49,17 @@ and many more formats...
 		 	tags:
 				- { name: twig.extension }
 
-## Usage ##
+## Usage
 
 This library adds a filter for twig templates that can be used like so:
 
     {{ item.created | ago }}
 
-## License ##
+## License
 
 See `LICENSE`.
 
-## Contact ##
+## Contact
 
 Email: info@arturgajewski.com
 
