@@ -11,7 +11,7 @@ This bundle adds a Twig Extension with a filter for automatically converting dat
 
 and many more formats...
 
-[![Build Status](https://secure.travis-ci.org/aga/AgaDateConverterBundle.png)](http://travis-ci.org/aga/AgaDateConverterBundle)
+[![Build Status](https://secure.travis-ci.org/Aga/AgaDateConverterBundle.png)](http://travis-ci.org/Aga/AgaDateConverterBundle)
 
 ## Installation ##
 
