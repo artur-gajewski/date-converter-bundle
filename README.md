@@ -27,14 +27,6 @@ Add the following lines to your composer.json file and update your project's com
 }
 ```
 
-Add the Aga namespace to your autoloader:
-
-	// app/autoload.php
-	$loader->registerNamespaces(array(
-		'Aga' => __DIR__.'/../vendor/bundles',
-		// your other namespaces
-	));
-
 Add this bundle to your application's kernel:
 
 	// application/ApplicationKernel.php
